@@ -1,8 +1,5 @@
 const app = require('express')()
 const http = require('http').createServer(app)
-const dotenv=require('dotenv')
-
-dotenv.config()
 
 
 app.get('/', (req, res) => {
@@ -19,14 +16,5 @@ socketio.on("connection", (userSocket) => {
 })
 
 http.listen(process.env.PORT)
-
-
-//Listen to any event
-userSocket.on("event_name",(data)=>{
-    //Perform operation on data
-})
-
-//Send message to all sockets
-userSocket.broadcast.emit("event_name",data)
 
 
