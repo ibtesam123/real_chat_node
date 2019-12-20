@@ -1,5 +1,8 @@
 const app = require('express')()
 const http = require('http').createServer(app)
+const dotenv=require('dotenv')
+
+dotenv.config()
 
 
 app.get('/', (req, res) => {
